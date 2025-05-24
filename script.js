@@ -1,24 +1,29 @@
-// Firstname
+// function showValues() {
+//   var firstName = document.getElementById("firstname").value;
+//   var lastName = document.getElementById("lastname").value;
 
-var firstName=document.getElementsByClassName('fn')
+  function showValues(){
+    var firstName=document.getElementById('firstname').value
+    var lastName=document.getElementById('lastname').value
+  
 
+  var outputDiv = document.getElementById("output");
+  outputDiv.innerHTML = "First Name: " + firstName + "<br>Last Name: " + lastName;
 
-// Last name 
-var LastName=document.getElementsByClassName('fl')
+  // Random color generate karna
+  var randomColor = getRandomColor();
 
-var sumOffNamelName
+  // Background color set karna
+  document.body.style.backgroundColor = randomColor;
+}
 
-firstName=LastName
-
-document.write(LastName)
-
-// button 
-var bSub=document.getElementsByClassName('sub')
-
-// after Submition SHowing Value
-var sName=document.getElementsByClassName('showing-value')
-
-
-
-
-
+// Random HEX color banane wala function
+function getRandomColor() {
+  // Random HEX color e.g., #a3e12f
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
